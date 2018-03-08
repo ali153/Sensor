@@ -6,7 +6,7 @@ form.addEventListener('submit', e => {
 
     let data = { ID: "dev1", temp: 80 };
 
-    fetch('http://192.168.2.9:3000/poll', {
+    fetch('http://192.168.1.89:3000/poll', {
       method: 'post',
       body: JSON.stringify(data),
       headers: new Headers({
@@ -20,14 +20,14 @@ form.addEventListener('submit', e => {
   
 });
 
-fetch('http://192.168.2.9:3000/poll')
+fetch('http://192.168.1.89:3000/poll')
   .then(res => res.json())
   .then(data => {
     const votes = data.votes;
 
     // Refresh the Total Votes every 2 seconds
     setInterval(() => {
-      fetch('http://192.168.2.9:3000/poll')
+      fetch('http://192.168.1.89:3000/poll')
         .then(res => res.json())
         .catch(err => console.log(err));
     }, 2000);

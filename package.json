@@ -1,5 +1,5 @@
 {
-  "name": "pusherpoll",
+  "name": "Sensor",
   "version": "1.0.1",
   "description": "Real time polling app",
   "main": "app.js",
